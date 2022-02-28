@@ -37,6 +37,138 @@
 ///////////////////////////////////////////////
 
 //===Header and Footer===================
-@import "footer.scss";
 @import "header.scss";
+@import "footer.scss";
+
+
+
+// ============================
+.main-block {
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__info {
+		$grid: 35;
+		flex: 0 0 0% + $grid;
+		max-width: 0% + $grid;
+	}
+
+	&__title {
+		$fs: 106;
+		font-size: calc($fs / $f-size) + em;
+		line-height: calc(106 / $fs * 100%);
+		color: $color-green;
+		text-transform: uppercase;
+		margin-bottom: 40px;
+		span {
+			position: relative;
+		}
+
+		img {
+			position: absolute;
+			bottom: -15px;
+			right: -220px;
+		}
+	}
+
+	&__text {
+		font-family: $font-gyre; 
+		$fs: 26;
+		font-size: calc($fs / $f-size) + em;
+		line-height: calc(36 / $fs * 100%);
+
+		span {
+			margin-left: 150px;
+		}
+	}
+
+	&__calc {
+		$grid: 60;
+		flex: 0 0 0% + $grid;
+		max-width: 0% + $grid;
+		min-height: 830px;
+		position: relative;
+		box-sizing: border-box;
+		display: flex;
+		padding: 25px 0px;
+	}
+
+	&__calc-title {
+		$fs: 44;
+		font-size: calc($fs / $f-size) + em;
+		line-height: calc(44 / $fs * 100%);
+		opacity: .5;
+		text-align: center;
+	}
+
+	&__calc-row {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		min-width: 100%;
+		flex: 1 1;
+	}
+
+	&__calc-counter {
+	}
+
+	&__calc-btn {
+	}
+
+	&__calc-text {
+		$fs: 14;
+		font-size: calc($fs / $f-size) + em;
+		line-height: calc(21 / $fs * 100%);
+		text-align: center;
+		text-transform: uppercase;
+
+		span {
+			color: $color-green;
+		}
+	}
+
+	&__corock {
+		position: absolute;
+		top: -10%;
+		left: 10%;
+		z-index: -1;
+
+	}
+
+	&__corner {
+		position: absolute;
+
+		&_one {
+			top: -25px;
+			right: -25px;
+		}
+		
+		&_two {
+			top: -25px;
+			left: -25px;
+			transform: rotate(-90deg);
+			
+		}
+
+		&_three {
+			bottom: -25px;
+			left: -25px;
+			transform: rotate(-180deg);
+			
+		}
+
+		&_four {
+			bottom: -25px;
+			right: -25px;
+			transform: rotate(-270deg);
+			
+		}
+	}
+}
+
 

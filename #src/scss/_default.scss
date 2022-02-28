@@ -1,5 +1,5 @@
 body {
-	//background-color: $color-fon;
+	background: $color-black-bg;
 	height: 100%;
 }
 a {
@@ -7,11 +7,20 @@ a {
 	}
 }
 
+main {
+	padding: 75px 0px 0px 0px;
+}
+
+p {
+	margin: 0;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5 {
+	margin: 0;
 }
 h1{
 }
