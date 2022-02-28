@@ -1,0 +1,42 @@
+//===Шрифты===============================
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+@import "_variables.scss";
+@import "fonts.scss";
+@import "_basic.scss";
+@import "_icon.scss";
+
+//===Модули===============================
+@import "../../../_module/SCSS/reset";
+// @import "../../../_module/SCSS/_ChoosQuant";
+// @import "../../../_module/SCSS/_BreadСrumbs"; //Хлебные крошки  //!Сниппет "!BreadСrumbs" ОТСУТСТВУЕТ
+// @import "../../../_module/SCSS/_CheckRadio"; //Чекбоксы и радио кнопки  //!Сниппет "!CheckRadio" ОТСУТСТВУЕТ
+// @import "../../../_module/SCSS/_rating"; //Рейтинг //!Сниппет "!rating" ОТСУТСТВУЕТ
+//@import "module/_InputNumber"; //Кастомный inpun number  //!Сниппет "!InputNumber" ОТСУТСТВУЕТ
+//@import "module/_CircularDiagram"; //Круговая диаграмма  //!Сниппет "!CircularDiagram" ОТСУТСТВУЕТ
+//@import "../../../_module/SCSS/_navmenu"; //Главное меню  //!Сниппет "!navmenu" html + js
+// @import "../../../_module/SCSS/_tooltip"; //тултипы  //!Сниппет "!tultip" html
+@import "../../../_module/SCSS/_modal"; //Модальное окно  //!Сниппет "!modal" html
+//@import "../../../_module/SCSS/_validador-form"; //Валидатор форм  //!Сниппет "!forma" html
+// @import "../../../_module/SCSS/_accordion"; //!Сниппет "!accordion" html
+//@import "../../../_module/SCSS/_hidingNumbers"; //Скрытие номера  //!Сниппет "!hidnum" html
+// @import "../../../_module/SCSS/_select"; //select поле выбора  //!Сниппет "!select" html
+// @import "../../../_module/SCSS/_tabs"; //Табы  //!Сниппет "!Tabs" html
+// @import "../../../_module/SCSS/_rating"; //Вывод рейтинга  //!Сниппет "!rating" html
+//===Проект===============================
+
+@import "_default.scss";
+
+///////////////////////////////////////////////
+
+//===Header and Footer===================
+@import "footer.scss";
+@import "header.scss";
+

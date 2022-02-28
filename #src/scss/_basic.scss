@@ -1,0 +1,61 @@
+.container {
+	width: 95%;
+	padding-left: ($plr - 4) + px;
+	padding-right: $plr + px;
+	margin: 0 auto;
+	&_fluid {
+		width: 93%;
+		padding: 0 $plr + px;
+		margin: 0 auto;
+		@media (min-width: $sm){
+		width: 100%;
+		}
+	}
+	@media (min-width: $sm) {
+		max-width: $wsm;
+		padding-left: $plr + px;
+	}
+	@media (min-width: $md) {
+		max-width: $wmd;
+	}
+	@media (min-width: $lg) {
+		max-width: $wlg;
+	}
+	@media (min-width: $xl) {
+		max-width: $wxl;
+	}
+	@media (min-width: $xxl) {
+		max-width: $wxxl;
+	}
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+	// margin-right: -$plr + px;
+	// margin-left: -$plr + px;
+	& > * {
+		box-sizing: border-box;
+		flex-shrink: 0;
+		width: 100%;
+		max-width: 100%;
+		padding-right: calc(var(--bs-gutter-x) / 2);
+		padding-left: calc(var(--bs-gutter-x) / 2);
+		margin-top: var(--bs-gutter-y);
+	}
+}
+
+@mixin center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+body {
+	font-family: $font;
+	font-style: normal;
+	font-weight: normal;
+	font-size: ($f-size) + px;
+	//background-color: $color-body;
+	position: relative;
+	overflow: hidden;
+	color: $color-text;
+}

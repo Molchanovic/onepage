@@ -1,0 +1,27 @@
+.svg-arrow {
+	background: url("css/svg/sprite.css-75f7c040.svg") 0 100% no-repeat;
+}
+
+.svg-arrow-dims {
+	width: 17px;
+	height: 16px;
+}
+
+.svg-calendar {
+	background: url("css/svg/sprite.css-75f7c040.svg") 100% 0 no-repeat;
+}
+
+.svg-calendar-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-car {
+	background: url("css/svg/sprite.css-75f7c040.svg") 0 0 no-repeat;
+}
+
+.svg-car-dims {
+	width: 26px;
+	height: 26px;
+}
+
