@@ -412,6 +412,64 @@ h5 {
   color: #FF44BF;
 }
 
+.header_active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  background: #080808;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.header_active .header__row {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header_active .header__logo {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.header_active .header__nav {
+  display: block;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  width: 100%;
+}
+
+.header_active .header__list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header_active .header__li {
+  margin-left: 0;
+  font-size: 2.1111111111em;
+  line-height: 100%;
+  margin-top: 40px;
+}
+
+.header_active .header__li::before {
+  display: none;
+}
+
+.header_active .header__block {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
 .burger-menu {
   display: none;
 }
@@ -534,9 +592,6 @@ h5 {
   margin-top: 0;
 }
 
-._no-webp .main-block__calc {
-  background: url(../img/gallery/crock.jpg); }
-
 .main-block__calc {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
@@ -550,7 +605,9 @@ h5 {
   display: -ms-flexbox;
   display: flex;
   padding: 25px 100px;
+  background: url(../img/gallery/croc.svg) no-repeat;
   background-position: center;
+  background-size: 100%;
 }
 
 .main-block__calc-title {
@@ -1136,5 +1193,3 @@ h5 {
     line-height: 107.6923076923%;
   }
 }
-
-._webp .main-block__calc { background: url(../img/gallery/crock.webp); }

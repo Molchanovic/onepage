@@ -183,8 +183,9 @@
 		display: flex;
 		padding: 25px 100px;
 
-		background: url(../img/gallery/crock.jpg);
+		background: url(../img/gallery/croc.svg) no-repeat;
 		background-position: center;
+		background-size: 100%;
 
 		@media (max-width: $mxxl){
 			min-height: 650px;
