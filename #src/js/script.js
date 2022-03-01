@@ -20,11 +20,15 @@ if (document.querySelector('.quantity-goods')) {
 				let minusBtn = el.querySelector('.quantity-goods-minus');
 				let numberBig = el.querySelector('.quantity-goods__number');
 				let min = +numCount.min;
+				let max = +numCount.max;
 				let step = +numCount.step;
 				plusBtn.addEventListener('click', () => {
-					numCount.value = +numCount.value + step;
-					if (+numCount.value < min) numCount.value = min;
-					numberBig.innerHTML = numCount.value;
+					if (numCount.value < max) {
+						numCount.value = +numCount.value + step;
+						if (+numCount.value < min) numCount.value = min;
+						numberBig.innerHTML = numCount.value;
+					}
+					
 				});
 				minusBtn.addEventListener('click', () => {
 					numCount.value = +numCount.value - step;
