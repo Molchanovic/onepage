@@ -29,12 +29,9 @@ window.onload = function () { //ожидание полной загрузки �
 	// 		}
 	// 	})
 	// })
-
 }
 
-
 if (document.querySelector('.quantity-goods')) {
-  
 	function formQuantity(clasname) {
 		if (document.querySelector('.' + clasname)) {
 			//!Записать в отдельный файл
@@ -60,15 +57,65 @@ if (document.querySelector('.quantity-goods')) {
 					if (+numCount.value < min) numCount.value = min;
 					numberBig.innerHTML = numCount.value;
 				});
-
-				
 			});
 		}
 	}
-	
 	formQuantity('quantity-goods');
+};
+
+if (document.querySelector('.main-block__calc')) {
 	
-	};
+	let countAda = document.querySelector('.main-block__ada');
+	let countNfts = document.querySelector('.main-block__nfts');
+	let countBtn = document.querySelector('.main-block__calc-btn');
+	let copyBtn = document.querySelector('.main-block__calc-copy');
+	let textBlock = document.querySelector('.main-block__text-block');
+	let countBlock = document.querySelector('.main-block__calc-counter');
+
+
+	countBtn.addEventListener ('click', function () {
+		let numberNft = document.querySelector('.quantity-goods__number').textContent;
+		countBtn.classList.add('main-block__calc-btn_disable');
+		copyBtn.classList.add('main-block__calc-copy_active');
+		countBlock.classList.add('main-block__calc-counter_disable');
+		textBlock.classList.add('main-block__text-block_active');
+		console.log (numberNft)
+		countNfts.innerHTML = numberNft;
+		countAda.innerHTML = numberNft * 100;
+	});
+
+	copyBtn.addEventListener ('click', function () {
+		let textLink = document.querySelector('.main-block__text-link').innerText;
+		
+	});
+
+
+
+	let copyEmailBtn = document.querySelector('.main-block__calc-copy');  
+copyEmailBtn.addEventListener('click', function(event) {  
+  // Выборка ссылки с электронной почтой 
+  let emailLink = document.querySelector('.main-block__text-link');  
+  let range = document.createRange();  
+  range.selectNode(emailLink);  
+  window.getSelection().addRange(range);  
+    
+  try {  
+    // Теперь, когда мы выбрали текст ссылки, выполним команду копирования
+    var successful = document.execCommand('copy');  
+    var msg = successful ? 'successful' : 'unsuccessful';  
+    console.log('Copy email command was ' + msg);  
+  } catch(err) {  
+    console.log('Oops, unable to copy');  
+  }  
+    
+  // Снятие выделения - ВНИМАНИЕ: вы должны использовать
+  // removeRange(range) когда это возможно
+  window.getSelection().removeAllRanges();  
+});
+
+
+
+}
 
 
 

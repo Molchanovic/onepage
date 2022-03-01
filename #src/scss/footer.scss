@@ -24,8 +24,6 @@
                 &:hover {
                     color: $color-pink;
                 }
-
-               
             }
 
             @media (max-width: $wsm){
@@ -42,8 +40,7 @@
             width: 100%;
         }
         @media (max-width: $mxl){
-           width: 90px;
-           
+            width: 90px;
         }
 
         @media (max-width: $mlg){

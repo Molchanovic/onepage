@@ -230,6 +230,10 @@
 	&__calc-counter {
 		display: flex;
 		align-items: center;
+
+		&_disable {
+			display: none;
+		}
 	}
 
 	&__calc-btn {
@@ -237,6 +241,22 @@
 			img {
 				width: 345px;
 			}
+		}
+		padding: 20px 60px;
+		background: $color-green;
+
+		&_disable {
+			display: none;
+		}
+	}
+
+	&__calc-copy {
+		display: none;
+		padding: 20px 60px;
+		background: $color-green;
+
+		&_active {
+			display: inline-block;
 		}
 	}
 
@@ -250,6 +270,8 @@
 		span {
 			color: $color-green;
 		}
+
+		
 	}
 
 	&__corner {
@@ -416,5 +438,51 @@
 			font-size: calc($fs / $f-size) + em;
 			line-height: calc(14 / $fs * 100%);
 		}
+	}
+
+	&__text-block {
+		display: none;
+
+		&_active {
+			display: block;
+		}
+	}
+
+	&__big-text {
+		$fs: 44;
+		font-size: calc($fs / $f-size) + em;
+		line-height: calc(44 / $fs * 100%);
+		text-align: center;
+		margin-bottom: 20px;
+
+		span {
+			color: $color-green;
+		}
+
+		@media (max-width: $mlg){
+			$fs: 38;
+			font-size: calc($fs / $f-size) + em;
+			line-height: calc(38 / $fs * 100%);
+		}
+
+		@media (max-width: $wsm){
+			$fs: 24;
+			font-size: calc($fs / $f-size) + em;
+			line-height: calc(24 / $fs * 100%);
+		}
+	}
+	
+	&__text-link {
+		$fs: 20;
+		font-size: calc($fs / $f-size) + em;
+		line-height: calc(30 / $fs * 100%);
+
+		
+		@media (max-width: $wsm){
+			$fs: 13;
+			font-size: calc($fs / $f-size) + em;
+			line-height: calc(14 / $fs * 100%);
+		}
+
 	}
 }
