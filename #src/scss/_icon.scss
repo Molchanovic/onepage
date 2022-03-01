@@ -15,7 +15,7 @@ i{@include i;}
 	-webkit-mask-position: unset;
 	background-color: unset;
 }
-$icon: (cart, );
+$icon: ( button );
 @each $icon in $icon {
 	.icon-#{$icon} {
 		-webkit-mask-image: url(../img/iconsprite/#{$icon}.svg);

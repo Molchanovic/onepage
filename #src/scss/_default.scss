@@ -61,25 +61,17 @@ h3 {
 	border-radius: 32px;
 	position: relative;
 	transition: 0.2s;
-	&__icon {
-		top: 14px;
-		left: 31px;
-		width: 22px;
-		height: 22px;
-		background-color: #fff;
+	&::after {
+		
 	}
+
+	&::before {
+
+	}
+
 	&:hover {
 		background-color: $color-btn-hover-backg;
 		transition: 0.2s;
-	}
-	&_active {
-		background-color: $color-btn-hover-backg;
-	}
-	&_disable {
-		background-color: $color-btn-disable-backg;
-		border-color: $color-btn-disable-border;
-		&:hover {
-		}
 	}
 }
 .form {

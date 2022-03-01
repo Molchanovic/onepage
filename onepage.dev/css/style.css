@@ -68,8 +68,8 @@ i {
   background-color: unset;
 }
 
-.icon-cart {
-  -webkit-mask-image: url(../img/iconsprite/cart.svg);
+.icon-button {
+  -webkit-mask-image: url(../img/iconsprite/button.svg);
 }
 
 html,
@@ -274,28 +274,11 @@ h5 {
   transition: 0.2s;
 }
 
-.btn__icon {
-  top: 14px;
-  left: 31px;
-  width: 22px;
-  height: 22px;
-  background-color: #fff;
-}
-
 .btn:hover {
   background-color: red;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
-}
-
-.btn_active {
-  background-color: red;
-}
-
-.btn_disable {
-  background-color: #333;
-  border-color: green;
 }
 
 .form__inscription {
@@ -648,11 +631,6 @@ h5 {
 
 .main-block__calc-counter_disable {
   display: none;
-}
-
-.main-block__calc-btn {
-  padding: 20px 60px;
-  background: #A5FA00;
 }
 
 .main-block__calc-btn_disable {
