@@ -3,14 +3,7 @@
 	padding-left: ($plr - 4) + px;
 	padding-right: $plr + px;
 	margin: 0 auto;
-	&_fluid {
-		width: 93%;
-		padding: 0 $plr + px;
-		margin: 0 auto;
-		@media (min-width: $sm){
-		width: 100%;
-		}
-	}
+	
 	@media (min-width: $sm) {
 		max-width: $wsm;
 		padding-left: $plr + px;
@@ -26,6 +19,23 @@
 	}
 	@media (min-width: $xxl) {
 		max-width: $wxxl;
+	}
+
+	&_fluid {
+		// width: 93%;
+		// padding: 0 $plr + px;
+		// margin: 0 auto;
+		// @media (min-width: $sm){
+		// width: 100%;
+		// }
+
+		@media (min-width: $xxl) {
+			max-width: 1640px;
+		}
+
+		@media (min-width: $xl) {
+			max-width: 1250px;
+		}
 	}
 }
 .row{

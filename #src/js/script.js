@@ -33,7 +33,42 @@ window.onload = function () { //ожидание полной загрузки �
 }
 
 
+if (document.querySelector('.quantity-goods')) {
+  
+	function formQuantity(clasname) {
+		if (document.querySelector('.' + clasname)) {
+			//!Записать в отдельный файл
+			let quentyGoods = document.querySelectorAll('.' + clasname);
+			quentyGoods.forEach(el => {
+				let numCount = el.querySelector('.quantity-goods__count');
+				let plusBtn = el.querySelector('.quantity-goods-plus');
+				let minusBtn = el.querySelector('.quantity-goods-minus');
+				let numberBig = el.querySelector('.quantity-goods__number');
+				let min = +numCount.min;
+				let step = +numCount.step;
+				plusBtn.addEventListener('click', () => {
+					numCount.value = +numCount.value + step;
+					if (+numCount.value < min) numCount.value = min;
+					numberBig.innerHTML = numCount.value;
+				});
+				minusBtn.addEventListener('click', () => {
+					numCount.value = +numCount.value - step;
+					if (+numCount.value < min) numCount.value = min;
+					numberBig.innerHTML = numCount.value;
+				});
+				numCount.addEventListener('change', () => {
+					if (+numCount.value < min) numCount.value = min;
+					numberBig.innerHTML = numCount.value;
+				});
 
+				
+			});
+		}
+	}
+	
+	formQuantity('quantity-goods');
+	
+	};
 
 
 
@@ -49,6 +84,7 @@ window.onload = function () { //ожидание полной загрузки �
 //@//@include('../../../_module/JS/_tooltip.js', {}) //Тултип  //!Сниппет "!tooltip" html
 //@//@include('../../../_module/JS/_validator-form.js', {}) //Валидатор форм  //!Сниппет "!forma" html
 //@//@include('../../../_module/JS/_accordion.js', {}) //Валидатор форм  //!Сниппет "!accordion" html
+// @//@include('../../../_module/JS/_quantity.js', {}) //Валидатор форм  //!Сниппет "!accordion" html
 
 if (document.querySelector('.tel')) {
 	//@//@include('../../../_module/JS/_maskPhone.js', {}) //Маска номера телефона (библиотека)
