@@ -135,8 +135,8 @@
 
                 i {
                     width: 22px;
-                    left: 7px;
-                    top: 7px;
+                    left: 8px;
+                    top: 6px;
                 }
             }
 
@@ -147,11 +147,11 @@
         }
 
         &:hover {
-            color: $color-pink;
+            color: $color-green;
         }
 
         @media (max-width: $mxxl){
-            $fs: 20;
+            $fs: 18;
             font-size: calc($fs / $f-size) + em;
             line-height: calc(27 / $fs * 100%);
         }
