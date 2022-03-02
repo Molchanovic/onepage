@@ -15,8 +15,8 @@ i{@include i;}
 	-webkit-mask-position: unset;
 	background-color: unset;
 }
-$icon: ( button );
-@each $icon in $icon {
+$icon: (copyitem, sound, discord, twitter, check );
+@each $icon in $icon { 
 	.icon-#{$icon} {
 		-webkit-mask-image: url(../img/iconsprite/#{$icon}.svg);
 		// -webkit-mask-image: url(../img/icons/sprite.svg##{$icon});

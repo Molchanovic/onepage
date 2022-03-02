@@ -1,5 +1,5 @@
 .header {
-    // padding: 30px 0px;
+    padding: 22px 0px;
 
     &__row {
         display: flex;
@@ -9,11 +9,17 @@
 
     &__logo {
         width: 220px;
+
         img {
             width: 100%;
         }
-        @media (max-width: $mxl){
-            width: 160px;
+
+        @media (max-width: $mxxl){
+            width: 190px;
+        }
+
+        @media (max-width: $mmd){
+            width: 180px;
         }
 
     }
@@ -59,18 +65,22 @@
         
 
         &:hover {
-            color: $color-pink;
+            color: $color-green;
         }
 
         &::before {
             counter-increment: menuItem;       
-            content: counter(menuItem); 
+            content: '0' counter(menuItem); 
             $fs: 14;
             font-size: calc($fs / $f-size) + em;
             line-height: calc(21 / $fs * 100%);
             position: absolute;
             top: -5px;
-            left: 5px;
+            left: -2px;
+
+            @media (max-width: $mxxl){
+                top: -8px;
+            }
         }
         
         &:first-child {
@@ -85,6 +95,8 @@
         align-items: center;
     }
 
+    
+
     &__block-text {
         text-transform: uppercase;
         display: flex;
@@ -97,6 +109,40 @@
         span {
             @media (max-width: $mlg){
                 display: none;
+            }
+        }
+
+        div {
+            width: 50px;
+            height: 50px;
+            margin-left: 20px;
+            background: url(../img/gallery/sound-bg.svg) no-repeat;
+            background-position: center;
+            background-size: contain;
+            position: relative;
+            filter: drop-shadow(0px 0px 26.667px rgba(165, 250, 0, 0.4));
+
+            i {
+                width: 30px;
+                left: 9px;
+                top: 12px;
+                background: $color-black-bg;
+            }
+
+            @media (max-width: $mxxl){
+                width: 37px;
+                height: 37px;
+
+                i {
+                    width: 22px;
+                    left: 7px;
+                    top: 7px;
+                }
+            }
+
+            @media (max-width: $mlg){
+                margin-right: 15px;
+                margin-left: 0;
             }
         }
 
@@ -180,15 +226,45 @@
 
 .burger-menu {
     display: none;
+    width: 37px;
+    height: 37px;
+    background: url(../img/gallery/menu-burger.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+
+    span {
+        width: 18px;
+        height: 2px;
+        background: $color-black-bg;
+
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        transition: .3s;
+
+        &:last-child {
+            top: 21px;
+        }
+    }
+
+    &_active {
+        span {
+            transform: rotate(-45deg);
+            top: 18px;
+           
+            &:last-child {
+                top: 18px;
+                transform: rotate(45deg); 
+            }
+        }
+    }
 
     @media (max-width: $mlg){
         display: block;
     }
 
     @media (max-width: $wsm){
-        img {
-            width: 60px;
-        }
         
     }
 }

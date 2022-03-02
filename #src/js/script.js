@@ -53,7 +53,7 @@ if (document.querySelector('.main-block__calc')) {
 	let copyBtn = document.querySelector('.main-block__calc-copy');
 	let textBlock = document.querySelector('.main-block__text-block');
 	let countBlock = document.querySelector('.main-block__calc-counter');
-
+	let endBtn = document.querySelector('.main-block__calc-end');
 
 	countBtn.addEventListener ('click', function () {
 		let numberNft = document.querySelector('.quantity-goods__number').textContent;
@@ -61,20 +61,13 @@ if (document.querySelector('.main-block__calc')) {
 		copyBtn.classList.add('main-block__calc-copy_active');
 		countBlock.classList.add('main-block__calc-counter_disable');
 		textBlock.classList.add('main-block__text-block_active');
-		console.log (numberNft)
+		
 		countNfts.innerHTML = numberNft;
 		countAda.innerHTML = numberNft * 100;
 	});
 
-	copyBtn.addEventListener ('click', function () {
-		let textLink = document.querySelector('.main-block__text-link').innerText;
-		
-	});
-
-
-
 	let copyEmailBtn = document.querySelector('.main-block__calc-copy');  
-copyEmailBtn.addEventListener('click', function(event) {  
+	copyEmailBtn.addEventListener('click', function(event) {  
   // Выборка ссылки с электронной почтой 
   let emailLink = document.querySelector('.main-block__text-link');  
   let range = document.createRange();  
@@ -97,6 +90,10 @@ copyEmailBtn.addEventListener('click', function(event) {
 
 
 
+copyBtn.addEventListener ('click', function () {
+	copyBtn.classList.remove('main-block__calc-copy_active');
+	endBtn.classList.add('main-block__calc-end_active');
+});
 }
 
 
