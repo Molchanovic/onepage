@@ -287,7 +287,7 @@
 	&__calc-btn {
 		margin-top: 80px;
 		@media (max-width: $mxxl){
-			min-width: 345px;
+			min-width: 380px;
 		}
 
 		@media (max-width: $wsm){
@@ -326,8 +326,8 @@
 			i {
 				width: 20px;
 				background: $color-black-bg;
-				left: 40px;
-				top: 25px;
+				left: 53px;
+				top: 33px;
 				transition: .3s;
 			}
 		}
@@ -337,7 +337,7 @@
 				width: 20px;
 				background: $color-black-bg;
 				left: 30px;
-				top: 25px;
+				top: 34px;
 				transition: .3s;
 			}
 		}
@@ -519,8 +519,8 @@
 
 		@media (max-width: $mxxl){
 			i {
-				top: 23px;
-				left: 110px;
+				top: 35px;
+				left: 125px;
 			}
 
 			span {
@@ -531,7 +531,7 @@
 		@media (max-width: $wsm){
 			i {
 				width: 18px;
-				top: 25px;
+				top: 35px;
 				left: 95px;
 			}
 

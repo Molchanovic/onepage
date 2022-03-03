@@ -134,13 +134,13 @@
             }
 
             @media (max-width: $mxxl){
-                width: 37px;
-                height: 37px;
+                width: 44px;
+                height: 44px;
 
                 i {
                     width: 22px;
-                    left: 7px;
-                    top: 5px;
+                    left: 11px;
+                    top: 8px;
                 }
             }
 
@@ -230,35 +230,35 @@
 
 .burger-menu {
     display: none;
-    width: 37px;
-    height: 37px;
+    width: 44px;
+    height: 44px;
     background: url(../img/gallery/menu-burger.svg) no-repeat;
     background-size: contain;
     background-position: center;
     position: relative;
 
     span {
-        width: 18px;
+        width: 19px;
         height: 2px;
         background: $color-black-bg;
 
         position: absolute;
-        top: 15px;
-        left: 10px;
+        top: 18px;
+        left: 13px;
         transition: .3s;
 
         &:last-child {
-            top: 21px;
+            top: 25px;
         }
     }
 
     &_active {
         span {
             transform: rotate(-45deg);
-            top: 18px;
+            top: 22px;
            
             &:last-child {
-                top: 18px;
+                top: 22px;
                 transform: rotate(45deg); 
             }
         }

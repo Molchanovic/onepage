@@ -686,8 +686,8 @@ h5 {
 
 .burger-menu {
   display: none;
-  width: 37px;
-  height: 37px;
+  width: 44px;
+  height: 44px;
   background: url(../img/gallery/menu-burger.svg) no-repeat;
   background-size: contain;
   background-position: center;
@@ -695,30 +695,30 @@ h5 {
 }
 
 .burger-menu span {
-  width: 18px;
+  width: 19px;
   height: 2px;
   background: #080808;
   position: absolute;
-  top: 15px;
-  left: 10px;
+  top: 18px;
+  left: 13px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
 }
 
 .burger-menu span:last-child {
-  top: 21px;
+  top: 25px;
 }
 
 .burger-menu_active span {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  top: 18px;
+  top: 22px;
 }
 
 .burger-menu_active span:last-child {
-  top: 18px;
+  top: 22px;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -1181,8 +1181,8 @@ h5 {
 @media (max-width: 1599px) {
   .btn {
     padding: 15px 20px;
-    min-height: 70px;
-    min-width: 340px;
+    min-height: 90px;
+    min-width: 380px;
     font-size: 1.5555555556em;
     line-height: 128.5714285714%;
   }
@@ -1202,14 +1202,14 @@ h5 {
   }
 
   .header__block-text div {
-    width: 37px;
-    height: 37px;
+    width: 44px;
+    height: 44px;
   }
 
   .header__block-text div i {
     width: 22px;
-    left: 7px;
-    top: 5px;
+    left: 11px;
+    top: 8px;
   }
 
   .header__block-text {
@@ -1268,7 +1268,7 @@ h5 {
   }
 
   .main-block__calc-btn {
-    min-width: 345px;
+    min-width: 380px;
   }
 
   .main-block__calc-copy {
@@ -1278,8 +1278,8 @@ h5 {
   .main-block__calc-copy i {
     width: 20px;
     background: #080808;
-    left: 40px;
-    top: 25px;
+    left: 53px;
+    top: 33px;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
@@ -1328,8 +1328,8 @@ h5 {
   }
 
   .main-block__calc-end i {
-    top: 23px;
-    left: 110px;
+    top: 35px;
+    left: 125px;
   }
 
   .main-block__calc-end span {
@@ -1602,7 +1602,6 @@ h5 {
     font-size: 1.3333333333em;
     line-height: 133.3333333333%;
     min-width: 300px;
-    height: 80px;
   }
 
   .header__block-text img {
@@ -1663,7 +1662,7 @@ h5 {
     width: 20px;
     background: #080808;
     left: 30px;
-    top: 25px;
+    top: 34px;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
@@ -1701,7 +1700,7 @@ h5 {
 
   .main-block__calc-end i {
     width: 18px;
-    top: 25px;
+    top: 35px;
     left: 95px;
   }
 
