@@ -260,14 +260,18 @@
 	&__calc-counter {
 		display: flex;
 		align-items: center;
-		margin-top: 70px;
+		margin-top: 100px;
 		&_disable {
 			display: none;
+		}
+		
+		@media (max-width: $mxxl){
+			margin-top: 0px;
 		}
 	}
 
 	&__calc-btn {
-		margin-top: 40px;
+		margin-top: 80px;
 		@media (max-width: $mxxl){
 			img {
 				width: 345px;
@@ -275,7 +279,7 @@
 		}
 
 		@media (max-width: $wsm){
-			margin-top: 40px;
+			margin-top: 20px;
 		}
 		&_disable {
 			display: none;
@@ -327,13 +331,14 @@
 		text-transform: uppercase;
 		padding-bottom: 20px;
 		max-width: 510px;
-		margin-top: 120px;
+		margin-top: 150px;
 
 		span {
 			color: $color-green;
 		}
 
 		@media (max-width: $mxxl){
+			// margin-top: 160px;
 			max-width: 400px;
 		}
 
@@ -346,6 +351,7 @@
 			font-size: calc($fs / $f-size) + em;
 			line-height: calc(11 / $fs * 100%);
 			max-width: 200px;
+			margin-top: 20px;
 		}
 
 		
@@ -577,12 +583,8 @@
 
 	&__soc {
 		@media (max-width: $mlg){
-			margin-top: 90px;
-
-		}
-		
-		@media (max-width: $wsm){
 			margin-top: 60px;
+
 		}
 		
 	}
