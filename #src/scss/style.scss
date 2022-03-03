@@ -85,6 +85,7 @@
 		color: $color-green;
 		text-transform: uppercase;
 		margin-bottom: 40px;
+		margin-top: 55px;
 		span {
 			position: relative;
 		}
@@ -99,12 +100,21 @@
 			$fs: 80;
 			font-size: calc($fs / $f-size) + em;
 			line-height: calc(90 / $fs * 100%);
+			margin-top: 0;
+
+			img {
+				bottom: -20px;
+			}
 		}
 
 		@media (max-width: $mlg){
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+
+			img {
+				bottom: -24px;
+			}
 
 			span {
 				text-align: right;
@@ -123,8 +133,9 @@
 		
 
 			img {
-				width: 90px;
-				position: static;
+				width: 120px;
+				top: 0px;
+				left: 125px;
 			}
 
 			span {
@@ -157,6 +168,7 @@
 		$fs: 26;
 		font-size: calc($fs / $f-size) + em;
 		line-height: calc(36 / $fs * 100%);
+		max-width: 845px;
 
 		span {
 			margin-left: 20%;
@@ -180,7 +192,7 @@
 			$fs: 17;
 			font-size: calc($fs / $f-size) + em;
 			line-height: calc(24 / $fs * 100%);
-
+			max-width: unsent;
 			
 		}
 	}
@@ -222,7 +234,7 @@
 		@media (max-width: $wsm){
 			margin-top: 50px;
 			min-height: 450px;
-			padding: 25px 25px;
+			padding: 25px 0px;
 		}
 	}
 	
@@ -234,17 +246,24 @@
 		line-height: calc(44 / $fs * 100%);
 		opacity: .5;
 		text-align: center;
+		margin-bottom: 160px;
 
 		@media (max-width: $mxxl){
 			$fs: 38;
 			font-size: calc($fs / $f-size) + em;
 			line-height: calc(38 / $fs * 100%);
+			margin-bottom: 130px;
+		}
+
+		@media (max-width: $mlg){
+			margin-bottom: 100px;
 		}
 
 		@media (max-width: $wsm){
 			$fs: 24;
 			font-size: calc($fs / $f-size) + em;
 			line-height: calc(24 / $fs * 100%);
+			margin-bottom: 40px;
 		}
 	}
 
@@ -260,26 +279,19 @@
 	&__calc-counter {
 		display: flex;
 		align-items: center;
-		margin-top: 100px;
 		&_disable {
 			display: none;
-		}
-		
-		@media (max-width: $mxxl){
-			margin-top: 0px;
 		}
 	}
 
 	&__calc-btn {
 		margin-top: 80px;
 		@media (max-width: $mxxl){
-			img {
-				width: 345px;
-			}
+			min-width: 345px;
 		}
 
 		@media (max-width: $wsm){
-			margin-top: 20px;
+			margin-top: 35px;
 		}
 		&_disable {
 			display: none;
@@ -314,7 +326,17 @@
 			i {
 				width: 20px;
 				background: $color-black-bg;
-				left: 25px;
+				left: 40px;
+				top: 25px;
+				transition: .3s;
+			}
+		}
+
+		@media (max-width: $wsm){
+			i {
+				width: 20px;
+				background: $color-black-bg;
+				left: 30px;
 				top: 25px;
 				transition: .3s;
 			}
@@ -351,7 +373,6 @@
 			font-size: calc($fs / $f-size) + em;
 			line-height: calc(11 / $fs * 100%);
 			max-width: 200px;
-			margin-top: 20px;
 		}
 
 		
@@ -445,6 +466,8 @@
 		color: $color-green;
 		transition: .3s;
 		user-select: none;
+		
+		
 
 		&:hover {
 			color: $color-pink;
@@ -455,7 +478,12 @@
 		@media (max-width: $mxxl){
 			$fs: 80;
 			font-size: calc($fs / $f-size) + em;
-			line-height: calc(120 / $fs * 100%);
+			line-height: calc(100 / $fs * 100%);
+
+			span {
+				display: flex;
+				align-items: center;
+			}
 		}
 
 		
@@ -469,16 +497,11 @@
         padding-left: 90px;
 		position: relative;
 		margin-top: 32px;
-		
-
-		span {
-			margin-left: 20px;
-		}
 
 		i {
-			width: 15px;
-			top: 25px;
-			left: 90px;
+			width: 20px;
+			top: 35px;
+			left: 150px;
 			background: $color-black-bg;
 			transition: .3s;
 		}
@@ -493,6 +516,29 @@
 		&_active {
 			display: flex;
 		}
+
+		@media (max-width: $mxxl){
+			i {
+				top: 23px;
+				left: 110px;
+			}
+
+			span {
+				margin-left: 20px;
+			}
+		}
+
+		@media (max-width: $wsm){
+			i {
+				width: 18px;
+				top: 25px;
+				left: 95px;
+			}
+
+			span {
+				margin-left: 20px;
+			}
+		}
     }
 
 	&__calc-count {
@@ -503,20 +549,20 @@
 		span {
 			$fs: 200;
 			font-size: calc($fs / $f-size) + em;
-			line-height: calc(300 / $fs * 100%);
+			line-height: calc(140 / $fs * 100%);
 			color: $color-text;
 			user-select: none;
 
 			@media (max-width: $mxxl){
 				$fs: 160;
 				font-size: calc($fs / $f-size) + em;
-				line-height: calc(240 / $fs * 100%);
+				line-height: calc(120 / $fs * 100%);
 			}
 
 			@media (max-width: $wsm){
 				$fs: 100;
 				font-size: calc($fs / $f-size) + em;
-				line-height: calc(150 / $fs * 100%);
+				line-height: calc(100 / $fs * 100%);
 			}
 		}
 		margin: 0px 50px;

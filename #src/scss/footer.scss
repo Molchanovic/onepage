@@ -32,7 +32,7 @@
                 transition: .3s;
                 
                 &:hover {
-                    color: $color-pink;
+                    color: $color-green;
                 }
             }
 
@@ -107,7 +107,7 @@
         }
 
         &:hover {
-            color: $color-pink;
+            color: $color-green;
         }
 
         @media (max-width: $mxxl){
