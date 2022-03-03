@@ -18,7 +18,11 @@
             width: 190px;
         }
 
-        @media (max-width: $mmd){
+        @media (max-width: $mxl){
+            width: 160px;
+        }
+
+        @media (max-width: $mlg){
             width: 180px;
         }
 

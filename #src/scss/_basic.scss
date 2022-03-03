@@ -1,25 +1,28 @@
 .container {
-	width: 95%;
-	padding-left: ($plr - 4) + px;
+
+	padding-left: $plr  + px;
 	padding-right: $plr + px;
 	margin: 0 auto;
+	box-sizing: border-box;
 	
-	@media (min-width: $sm) {
-		max-width: $wsm;
-		padding-left: $plr + px;
+	@media (max-width: $mxl) {
+		padding-left: $mlr  + px;
+		padding-right: ($mlr - 4) + px;
 	}
-	@media (min-width: $md) {
-		max-width: $wmd;
+	@media (max-width: $wsm) {
+		padding-left: $wlr  + px;
+		padding-right: $wlr + px;
+		width: 100%;
 	}
-	@media (min-width: $lg) {
-		max-width: $wlg;
-	}
-	@media (min-width: $xl) {
-		max-width: $wxl;
-	}
-	@media (min-width: $xxl) {
-		max-width: $wxxl;
-	}
+	// @media (min-width: $lg) {
+	// 	max-width: $wlg;
+	// }
+	// @media (min-width: $xl) {
+	// 	max-width: $wxl;
+	// }
+	// @media (min-width: $xxl) {
+	// 	max-width: $wxxl;
+	// }
 
 	&_fluid {
 		// width: 93%;
